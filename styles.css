@@ -121,7 +121,7 @@ span{
 .home-img img{
     position: relative;
     top: 3rem;
-    width: 32vw;
+    width: 30vw;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
@@ -133,7 +133,7 @@ span{
                 0 0 100px var(--main-color);
 }
 .home-content p{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
     line-height: 1.8;
     max-width: 1000px;
