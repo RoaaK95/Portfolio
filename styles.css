@@ -276,7 +276,7 @@ span{
 .heading{
     font-size: 8rem;
     text-align: center;
-    margin: 5rem 0;
+    margin: 2rem 0;
 }
 .projects{
     background: var(--second-bg-color);
@@ -290,11 +290,11 @@ span{
     flex-direction: column;
 }
 .projects .heading{
-    margin-bottom: 5rem;
+    margin-bottom: 8rem;
 }
 .projects-box img{
-    width: 15rem;
-    border-radius: 50%;
+    width: 30rem;
+    border-radius: 5%;
     border: 3px solid var(--main-color);
     box-shadow: 0 0 25px var(--main-color);
 }
