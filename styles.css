@@ -412,7 +412,7 @@ span{
     margin-bottom: 0;
 }
 .timeline-item:nth-child(odd){
-    padding-right: 0;
+    padding-right: calc(20% + 10px);
     text-align: left;
 }
 .timeline-item:nth-child(odd),
@@ -454,7 +454,7 @@ span{
     font-size: 20px;
     color: white;
     margin: 0 0 10px;
-    font-weight: 500;
+    font-weight: 600;
 }
 .timeline-content p{
     color: white;
