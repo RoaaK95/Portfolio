@@ -337,3 +337,41 @@ span{
     color: white;
     font-size: 2rem;
 }
+
+/* TECHNICAL SKILLS*/
+.technical{
+    background: var(--bg-color);
+    color: black;
+}
+.technical h2{
+    margin-bottom: 7rem;
+    color: rgb(255, 255, 255)
+}
+.technical-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.technical-box{
+    background-color: var(--bg-color);
+    height:80px;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    border: 4px solid var(--main-color);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.technical-box p{
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    margin: 6px 10px;
+    font-weight: 600;
+
+}
+ 
