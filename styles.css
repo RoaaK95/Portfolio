@@ -561,3 +561,24 @@ span{
         margin: 0 5rem;
     }
 }
+
+@media(max-width:991px){
+    header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .timeline-item:nth-child(odd){
+        padding-right: 0;
+    }
+    .projects {
+        padding-bottom: 7rem;
+    }
+    .projects .wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
