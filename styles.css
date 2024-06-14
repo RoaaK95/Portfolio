@@ -548,3 +548,16 @@ span{
     font-size: 18px;
     color: white;
 }
+
+/* Resizing*/
+
+@media(max-width:1285px){
+    html{
+        font-size: 55%;
+    }
+    .wrapper{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 5rem;
+    }
+}
