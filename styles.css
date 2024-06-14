@@ -368,11 +368,11 @@ span{
     flex-shrink: 0;
 }
 .technical-box p{
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: white;
     text-align: center;
     margin: 6px 10px;
-    font-weight: 600;
+    font-weight: 500;
 
 }
 
