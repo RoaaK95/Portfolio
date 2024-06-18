@@ -293,10 +293,9 @@ span{
     margin-bottom: 8rem;
 }
 .projects-box img{
-    width: 30rem;
+    width: 45rem; 
+    height: 35rem;
     border-radius: 5%;
-    border: 3px solid var(--main-color);
-    box-shadow: 0 0 25px var(--main-color);
 }
 .wrapper{
     display: grid;
@@ -326,17 +325,25 @@ span{
     transform: translateY(-10px)scale(1.03);
     box-shadow: 0 0 50px var(--main-color);
 }
+ 
 .project-item h2{
     font-size: 2.8rem;
 }
 .project-item p{
-    font-size: 1.3rem;
+    font-size: 1.7rem;
 }
-#unity,
-#group{
-    color: white;
-    font-size: 2rem;
+.project-info{
+    font-size: 1.5rem;
+    font-weight: 300;
 }
+.project-info img{
+    width: 3.5rem;
+    height: 3.5rem;
+    border: none;
+    box-shadow: none;
+    margin: 0.3rem;
+}
+
 
 /* TECHNICAL SKILLS*/
 .technical{
@@ -629,7 +636,7 @@ span{
         width: 56vw;
     }
     .projects h2{
-        margin-bottom: 3rem;
+        margin-top: 1rem;
     }
     .projects .wrapper{
         grid-template-columns: repeat(1,1fr);
