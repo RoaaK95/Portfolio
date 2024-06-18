@@ -71,3 +71,18 @@ body{
 
  
 
+/* FOOTER*/
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 12px 0;
+    background-color: var(--second-bg-color);
+}
+ 
+.footer .copyright{
+    margin-top: 12px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
