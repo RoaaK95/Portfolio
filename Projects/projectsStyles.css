@@ -76,7 +76,7 @@ section{
     padding: 10rem 12% 10rem;
 }
 .heading{
-    font-size: 8rem;
+    font-size: 6rem;
     text-align: center;
     margin: 5rem 0;
 }
@@ -88,10 +88,14 @@ section{
     margin-bottom: 5rem;
     color: white
 }
+ 
 .main img{
+    display: block;
     position: relative;
     width: 100%;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
    margin-bottom: 3rem;
    box-shadow: 0 0 10px var(--main-color);
    cursor: pointer;
@@ -142,4 +146,14 @@ section{
 .project-info  i{
     font-size: 1.7rem;
     line-height: 1;
+}
+
+/* MAIN*/
+.para1 {
+    background-color: var(--second-bg-color);
+}
+.para1 .heading{
+    font-size: 3rem;
+    text-align: left;
+    margin: 1rem 0;
 }
