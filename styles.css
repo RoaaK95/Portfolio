@@ -324,11 +324,14 @@ span{
     border: 3px solid var(--main-color);
     transform: translateY(-10px)scale(1.03);
     box-shadow: 0 0 50px var(--main-color);
+    color: var(--main-color);
 }
  
 .project-item h2{
     font-size: 2.8rem;
+    color: var(--main-color);
 }
+ 
 .project-item p{
     font-size: 1.7rem;
 }
