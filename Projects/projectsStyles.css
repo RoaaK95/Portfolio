@@ -116,12 +116,9 @@ section{
     height:200px;
     border-radius: 3rem;
     border: 5px solid transparent;
-    cursor: pointer;
     transition: 0.4s ease-in-out;
 }
-.info-box:hover{
-    background:#c088d8a7;
-}
+ 
 .info-box .project-info{
     display: flex;
     flex-direction: column;
@@ -147,7 +144,11 @@ section{
     font-size: 1.7rem;
     line-height: 1;
 }
-
+ 
+.project-info a :hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
 /* MAIN*/
 .para1 {
     background-color: var(--second-bg-color);
