@@ -23,7 +23,6 @@ html{
 body{
     background: var(--bg-color);
     color:var(--text-color);
-    min-width: 800px;
 }
 
 /* HEADER*/
@@ -100,6 +99,7 @@ section{
    box-shadow: 0 0 10px var(--main-color);
    cursor: pointer;
    transition: 0.4s ease-in-out;
+   z-index: 0;
 }
 .main img:hover{
    box-shadow: 0 0 10px var(--main-color),
@@ -134,11 +134,11 @@ section{
     line-height: 3;
 }
 .project-info p, .project-info  i{
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 500;
     max-height: 100px;
     line-height: 1.5;
-    margin: 1px 2px;
+    margin: 2px 2px;
 }
 .project-info  i{
     font-size: 1.7rem;

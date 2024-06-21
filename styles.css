@@ -352,7 +352,6 @@ span{
 .technical{
     background: var(--bg-color);
     color: black;
-    min-height: 20px;
 }
 .technical h2{
     margin-bottom: 7rem;
@@ -394,7 +393,6 @@ span{
 }
 .education{
     padding: 100px 15px;
-    min-height: 20px;
     background: var(--second-bg-color);
 }
 .education h2{
@@ -489,7 +487,7 @@ span{
 /* CONTACT*/
 .contact{
     background-color: var(--bg-color);
-    min-height: 20px;
+    
 }
 .contact h2{
     margin-bottom: 6rem;
@@ -510,7 +508,7 @@ span{
     display: inline-block;
     text-align: center;
     border-radius: 50%;
-    margin: 0 20px;
+    margin: 40px 20px;
     transition: 0.3s ease-in-out;
 }
 .contact .social a:hover{
@@ -524,7 +522,7 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .contact .btn-group a{ 
