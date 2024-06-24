@@ -152,17 +152,17 @@ section{
     text-decoration: underline;
     cursor: pointer;
 }
-/* MAIN*/
-.para1 {
+/* PARAGRAPHS*/
+.para {
     background-color: var(--second-bg-color);
 }
-.para1 .heading{
+.para .heading{
     font-size: 3rem;
     text-align: left;
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
-.para1 .text p{
+.para .text p{
     font-size: 1.8rem;
     font-weight: 500;
     text-align: left;
@@ -170,10 +170,33 @@ section{
     margin-top: 3rem ;
 }
 
-.para1 a{
+.para a{
     color: var(--main-color);
 }
-.para1 a :hover{
+.para a :hover{
     text-decoration: underline;
     cursor: pointer;
+}
+
+.subPara{
+    margin-top: 10rem ;
+}
+
+.img-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 0rem;
+}
+.img-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%; 
+    height: 40rem;
+}
+.img-container img{
+    width: 100%;
+    height: auto;
 }
