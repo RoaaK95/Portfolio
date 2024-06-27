@@ -326,7 +326,6 @@ span{
     box-shadow: 0 0 50px var(--main-color);
     color: var(--main-color);
 }
- 
 .project-item h2{
     font-size: 2.8rem;
     color: var(--main-color);
