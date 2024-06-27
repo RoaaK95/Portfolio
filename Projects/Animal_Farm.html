@@ -71,7 +71,7 @@
       in games and animation, focusing on math and physics (mainly Vectors) and how to apply their principles to model and simulate complex behaviors through programming.
     </p>
     <p>
-      I had decided to make a simple farm simulation, where the player character is a farmer and the AI agents are animals so that through this
+      I had decided to make a simple farm simulation with low poly assets, where the player character is a farmer and the AI agents are animals. Through this
       simple world I could focus on making the animals behaviors as close as their behavior in reality.
     </p>
     
@@ -88,17 +88,27 @@
   <h2 class="heading"> World Settings</h2>
    <div class="text">
     <p>
-      This project was a fun and challenging project for me where I had the opportunity to put into practice what I learned about <strong>Autonomous Agents</strong>
-      in games and animation, focusing on math and physics (mainly Vectors) and how to apply their principles to model and simulate complex behaviors through programming.
+       The simulation world consists of grass, barn, sun, water troughs, mud puddle, fence, seeds and Sun.
+       <strong>The player character</strong> is a farmer that can be controlled by arrow keys to move around.
+       <strong> AI agents</strong> are the animals : cows, sheep, pigs and chickens all of which use NavMesh Agent component attached to them.
     </p>
     <p>
-      I had decided to make a simple farm simulation, where the player character is a farmer and the AI agents are animals so that through this
-      simple world I could focus on making the animals behaviors as close as their behavior in reality.
+       After setting up the scene and characters, I started by adding colliders to props, player character and AI agents.
+       Then I added a <strong>navigation map</strong> to the grass game object and baked it to the scene as it'd be the surface the agents will navigate on.
+       I decided to add <strong>Navmesh obstacle</strong> component to the game objects shown in image below ( barn, water troughs, mud puddle, fence, seeds).
+       Navmesh obstacle is usually used for moving objects, but I wanted to experiment using it for static objects to observe the difference 
+       between using colliders alone verses using colliders with Navmesh obstacle.
     </p>
     
     <div class="img-container">
-      <img src="../Images/Projects_banner/Autonomus_Banner.gif">
-      <img src="../Images/Projects_banner/Autonomus_Banner.gif">
+      <figure>
+      <img src="./Autonomous_Agents_imgs/Navmesh.png" alt="navmesh map">
+      <figcaption>NavMesh map - Scene view</figcaption>
+    </figure>
+    <figure>
+      <img src="./Autonomous_Agents_imgs/Navmesh_ob.png" alt="navmesh obstacles">
+      <figcaption>Navmesh obstacles - Scene view</figcaption>
+      </figure>
     </div>
    </div>
   </div>
