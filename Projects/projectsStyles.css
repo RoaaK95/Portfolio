@@ -181,7 +181,7 @@ section{
 }
 
 .subPara{
-    margin-top: 8rem ;
+    margin-top: 6rem ;
 }
 
  
@@ -219,4 +219,10 @@ section{
     text-align: center;
     font-size: 18px;
     color: white;
+}
+
+.space{
+    height: 100px;
+    width: 100%;
+    background-color: var(--second-bg-color);
 }
