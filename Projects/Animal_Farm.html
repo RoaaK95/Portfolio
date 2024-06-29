@@ -128,9 +128,45 @@
     </p>
 
 
+<!--Cows subsection-->
+<div class="subPara">
+  <h2 class="heading"> Cows Agents</h2>
+   <div class="text">
+    <p>
+       There are two cows agents in the environment, each has two states : <i>wander and seek.</i>
+    </p>
+    <p>
+       <strong> Wander </strong> is the idle state in which the cow agent moves around the farm (navmesh map) with no definite goal location.<br>
+       Wander behavior was implemented here by constraining the cow agent to the surface of a sphere located slightly ahead of it.
+       The sphere has a target location positioned on its circumference that moves back and forth around the sphere within a random range.
+       As it moves the cow agent update its goal location, this random displacement makes the cow agent behavior look realistic without it looking
+       twitchy and produces sustained turns.
+       
+    </p>
+    <p>
+      <strong> Seek </strong> is the state in which the cow seeks the large water trough.<br>
+      Seek behavior is simply the pursue of a static target, it was implemented using navmesh agent set destination method with a stopping distance 
+      to prevent the cow from continuously arriving to the target,stepping back and then approach it again.<br>
+      I made the seek behavior evoke randomly if the cow is within a certain distance from the water trough to make the cow agent looks like
+      its going to water trough only if its thirsty.
+    </p>
+    
+    <div class="img-container">
+      <figure>
+      <img src="./Autonomous_Agents_imgs/Cows_Wander.gif" alt="cows wander">
+      <figcaption>Cows wander behavior</figcaption>
+    </figure>
+    <figure>
+      <img src="./Autonomous_Agents_imgs/Cows_seek.gif" alt="cows seek">
+      <figcaption>Cows seek behavior</figcaption>
+      </figure>
+    </div>
+   </div>
+  </div>
+
+
+
 </section>
  
-  
-  
 </body>
 </html>

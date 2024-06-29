@@ -182,7 +182,7 @@ section{
     margin-top: 8rem ;
 }
 
-
+ 
 .img-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
