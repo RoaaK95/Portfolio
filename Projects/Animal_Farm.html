@@ -88,8 +88,8 @@
   <h2 class="heading"> World Settings</h2>
    <div class="text">
     <p>
-       The simulation world consists of grass, barn, sun, water troughs, mud puddle, fence, seeds and Sun.
-       <strong>The player character</strong> is a farmer that can be controlled by arrow keys to move around.
+       The simulation world consists of grass, barn, sun, water troughs, mud puddle, fence, seeds and Sun.<br>
+       <strong>The player character</strong> is a farmer that can be controlled by arrow keys to move around.<br>
        <strong> AI agents</strong> are the animals : cows, sheep, pigs and chickens all of which use NavMesh Agent component attached to them.
     </p>
     <p>
@@ -113,8 +113,23 @@
    </div>
   </div>
 
-</section>
 
+<!--Animation-->
+<div class="subPara">
+  <h2 class="heading">Animation</h2>
+   <div class="text">
+    <p>
+      The animation for the player was a simple system, where the character moves based on the player's vertical and horizontal axes input.<br>
+      The four legged animals agents were not animated using unity animation system, but rather using vectors. Each leg is treated as a separate
+      game object and is then rotated halfway through using Lerp function during the walk animation. <br>
+      All the four legged agents call the Animate script which has two states: walking or not walking, based on which state the agent is in,
+      the script either animate the animal or not.
+    </p>
+
+
+</section>
+ 
+  
   
 </body>
 </html>
