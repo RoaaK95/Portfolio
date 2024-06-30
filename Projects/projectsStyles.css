@@ -23,6 +23,7 @@ html{
 body{
     background: var(--bg-color);
     color:var(--text-color);
+    min-width: 350px;
 }
 
 /* HEADER*/
@@ -239,3 +240,44 @@ section{
         padding: 2rem 3%;
     }
 }
+
+@media(max-width:895px){
+    html{
+        font-size: 55%;
+    }
+    .navbar a{
+        
+        margin-left: 3rem;
+    }
+    .info-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .info-box {
+        height:150px;
+    }
+    .info-box .project-info{
+        display: inline-block;
+        text-align: left;
+        max-height: 100px;
+        padding: 0.5rem 2rem;
+    }
+   
+    .img-container{
+        grid-template-columns: repeat(1,1fr);
+       height: 100rem;
+       margin: 2rem 0rem;  
+       gap: 0rem;
+    }
+    .img-container figure{
+       margin: 0 auto;
+       width: 85%;
+    }
+     
+}
+
+@media(max-width:750px){
+    .img-container{
+       height: auto;
+}
+}
+ 
