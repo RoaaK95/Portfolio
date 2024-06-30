@@ -264,20 +264,15 @@ section{
    
     .img-container{
         grid-template-columns: repeat(1,1fr);
-       height: 100rem;
+       height: auto;
        margin: 2rem 0rem;  
        gap: 0rem;
     }
     .img-container figure{
-       margin: 0 auto;
+       margin: 1rem auto;
        width: 85%;
     }
      
 }
 
-@media(max-width:750px){
-    .img-container{
-       height: auto;
-}
-}
  
