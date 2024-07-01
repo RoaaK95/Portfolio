@@ -209,13 +209,19 @@
        There are three pigs agents (one of them is a piglet) in the environment, each has two states : <i>wander and hide.</i>
     </p>
     <p>
-       <strong> Wander </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eum vel explicabo officiis pariatur 
-       reiciendis officia odit. Sunt mollitia atque hic, iusto at doloremque optio, cumque, necessitatibus nam sequi odit.
-       
+       <strong> Wander </strong> is the idle state in which the pig agent moves around the farm (navmesh map) with no definite goal location.<br>
+       Wander behavior was implemented here in the same way as other animals in farm, only with slightly different sphere radius, distance and jitter
+       to make the agent wander behavior looks different than the other animals.
     </p>
     <p>
-      <strong> Hide </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum facere fugit magni nisi voluptatem 
-      quibusdam itaque, ipsam nemo, rerum, esse ducimus. Minima veniam praesentium debitis officia expedita, aut aliquid dolorum.
+      <strong> Hide </strong> is the state in which the pig agent hides from the player behind the barn.<br>
+      Hide was implemented by first setting up the hiding location on the scene, and then using <strong>singleton</strong> to store 
+      that location and access it from the pig agent script. I used the singleton design pattern to ensure that the location has only one instance 
+      but could still be accessed by agents easily.<br>
+      Two methods where used to determine when the pigs should hide, the first method checks if the agent can see the target, the second method
+      check if the target can see the agent. These two methods where achieved by casting a ray from or to the target and then calculate the angel 
+      between where the ray cast hit the target or the pig.<br>
+      I made the pigs hide if the two methods return true, meaning the pigs hide only if they see the player and the player is facing them.
     </p>
     
     <div class="img-container">
