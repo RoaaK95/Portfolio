@@ -174,13 +174,18 @@
        There are four sheep agents (one of them is a lamb) in the environment, each has two states : <i>wander and pursue.</i>
     </p>
     <p>
-       <strong> Wander </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eum vel explicabo officiis pariatur 
-       reiciendis officia odit. Sunt mollitia atque hic, iusto at doloremque optio, cumque, necessitatibus nam sequi odit.
-       
+       <strong> Wander </strong> is the idle state in which the sheep agent moves around the farm (navmesh map) with no definite goal location.<br>
+       Wander behavior was implemented here in the same way as other animals in farm, only with slightly different sphere radius, distance and jitter
+       to make the sheep agent wander behavior looks different than the other animals.
     </p>
     <p>
-      <strong> Pursue </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum facere fugit magni nisi voluptatem 
-      quibusdam itaque, ipsam nemo, rerum, esse ducimus. Minima veniam praesentium debitis officia expedita, aut aliquid dolorum.
+      <strong> Pursue </strong> is the state in which the sheep follow the player character around.<br>
+      Pursue behavior is similar to seek except that target is a moving character and the agent should predict the target's future position.
+      It was implemented here by using an estimator that gets reevaluated each frame. The estimator was obtained by taking into account 
+      the relative headings of sheep agent and the player character, and whether the agent is generally ahead of, behind, or to the side of player. 
+      Steering for pursuit is then achieved by applying the seek function to the predicted target location.<br>
+      I made the pursue behavior evoke randomly if the sheep agent is within a certain distance from the player to give the sheep more realistic 
+      behavior pattern.
     </p>
     
     <div class="img-container">
