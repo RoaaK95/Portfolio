@@ -124,7 +124,10 @@
       The four legged animals agents were not animated using unity animation system, but rather using vectors. Each leg is treated as a separate
       game object and is then rotated halfway through using Lerp function during the walk animation. <br>
       All the four legged agents call the Animate script which has two states: walking or not walking, based on which state the agent is in,
-      the script either animate the animal or not.
+      the script either animate the animal or not.<br>
+      The chickens agents, similarly to other animals agents in the farm, were animated using vectors only. The only difference is chickens has only
+      two legs. The chickens also had second animation which is peck food from the ground, which was implemented using an enumerator that swings 
+      between two euler angles for the x axis. 
     </p>
    </div>
 </div>
@@ -219,7 +222,7 @@
       that location and access it from the pig agent script. I used the singleton design pattern to ensure that the location has only one instance 
       but could still be accessed by agents easily.<br>
       Two methods where used to determine when the pigs should hide, the first method checks if the agent can see the target, the second method
-      check if the target can see the agent. These two methods where achieved by casting a ray from or to the target and then calculate the angel 
+      check if the target can see the agent. These two methods where achieved by casting a ray from or to the target and then calculate the angle 
       between where the ray cast hit the target or the pig.<br>
       I made the pigs hide if the two methods return true, meaning the pigs hide only if they see the player and the player is facing them.
     </p>
@@ -245,13 +248,19 @@
        There are three chickens agents in the environment, each has two states : <i>seek and evade</i>
     </p>
     <p>
-       <strong> Seek </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eum vel explicabo officiis pariatur 
-       reiciendis officia odit. Sunt mollitia atque hic, iusto at doloremque optio, cumque, necessitatibus nam sequi odit.
-       
+       <strong> Seek </strong> is the idle state in which the chicken agent seek and peck the food on the ground<br>
+      Seek behavior was implemented here in the same way cows agents, the only difference is the stopping distance and that the chicken 
+      once it reaches the target start the peck animation rather than stop moving.<br>
     </p>
     <p>
-      <strong> Evade </strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum facere fugit magni nisi voluptatem 
-      quibusdam itaque, ipsam nemo, rerum, esse ducimus. Minima veniam praesentium debitis officia expedita, aut aliquid dolorum.
+      <strong> Evade </strong>  is the state in which the chicken agent runaway from the player.<br>
+      Evade behavior is opposite of pursuit, where the agent goes away from predicted future position of the target.
+      To implement evade behavior, I first wrote a flee method.<br>
+      <strong> Flee </strong> behavior is simply the inverse of seek, it was implemented using navmesh agent set destination method with a 
+      stopping distance to prevent jittery behavior.<br>
+      Then in Evade method an estimator is used to predicts what direction should the agent to steer the character so that its velocity is 
+      radially aligned away from the target. 
+      Steering for evasion is then achieved by applying the flee function to the predicted target location.<br>
     </p>
     
     <div class="img-container">
