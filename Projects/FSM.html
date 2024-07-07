@@ -83,6 +83,37 @@
      </a>
       </div>
      </div>
+
+<!--World Settings-->
+<div class="subPara">
+  <h2 class="heading"> World Settings</h2>
+   <div class="text">
+    <p>
+       The simulation world consists of grass, barn, sun, water troughs, mud puddle, fence, seeds and Sun.<br>
+       <strong>The player character</strong> is a farmer that can be controlled by arrow keys to move around.<br>
+       <strong> AI agents</strong> are the animals : cows, sheep, pigs and chickens all of which use NavMesh Agent component attached to them.
+    </p>
+    <p>
+       After setting up the scene and characters, I started by adding colliders to props, player character and AI agents.
+       Then I added a <strong>navigation map</strong> to the grass game object and baked it to the scene as it'd be the surface the agents will navigate on.
+       I decided to add <strong>Navmesh obstacle</strong> component to the game objects shown in image below ( barn, water troughs, mud puddle, fence, seeds).
+       Navmesh obstacle is usually used for moving objects, but I wanted to experiment using it for static objects to observe the difference 
+       between using colliders alone verses using colliders with Navmesh obstacle.
+    </p>
+    
+    <div class="img-container">
+      <figure>
+      <img src="/Projects/FSM_imgs/Pursue_diagram.drawio.png" alt="navmesh map">
+      <figcaption>NavMesh map - Scene view</figcaption>
+    </figure>
+    <figure>
+      <img src="./Autonomous_Agents_imgs/Navmesh_ob.png" alt="navmesh obstacles">
+      <figcaption>Navmesh obstacles - Scene view</figcaption>
+      </figure>
+    </div>
+   </div>
+  </div>
+
 </section>   
 </body>
 </html>
