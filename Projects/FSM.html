@@ -215,8 +215,7 @@
        (measured using remaining distance method) the next checkpoint in the list is assigned as the target waypoint and the dragon can walk towards
        it using set destination method and trigger the Walk animation.<br>
        The Update method also calls the '<b>Can See Player</b>' method, if it returns true the Pursue state is called, if it returns false then the Walk
-       state continuous running. Once the State machine pick the next state, the exit method is then called.
-
+       state continues running. Once the State machine pick the next state, the exit method is then called.
     </p>
     
    
@@ -233,6 +232,43 @@
    </div>
   </div>
 
+   <!--Pursue subsection-->
+ <div class="subPara">
+  <h2 class="heading"> Pursue State</h2>
+   <div class="text">
+    <p>
+      <p>
+         <strong>Can See Player Method:</strong> Since the other states use this method to enter the pursue state, I wrote this method
+         in the main state class, so it could be accessed from the other states. The method calculates the angle and the distance between 
+         the player and the dragon character then compares the result with 'visible angle' and 'visible distance', which are both variables
+         I tested to reach the desired agent behavior. The method returns true if the player is both close and within the dragon's visual field.
+         
+      </p>
+      
+    <p>
+       <strong>The Pursue State:</strong> starting from the Enter overridden method, the pursue animation is triggered.
+       In the Update method, the dragon agent follows the player using 'set destination' method, then stops within a certain distance.<br>
+       The Update method also call the 'has path' method which will return true if the agent has a path to attack the player and false otherwise.
+       If it returns false, then the pursue state continues running. If it return true then the '<b>Can Attack Player</b>' method is called, if it
+       returns true then the State Machine pick the next state which is Attack state. if it returns false, meaning the dragon has a path but can't attack
+       the player, then I had to check if the dragon can still see the player which is why I used '<b>Can See Player</b>' method again to check
+       if the dragon should continues pursuing or the switch to the Walk state.
+
+    </p>
+    
+   
+    <div class="img-container">
+      <figure>
+      <img src="./FSM_imgs/Pursue_diagram.drawio.png" alt="pursue state flowchart">
+      <figcaption>Pursue State Flowchart</figcaption>
+    </figure>
+    <figure>
+      <img src="./FSM_imgs/Pursue.gif" alt="pursue animation">
+      <figcaption>Dragon's Pursue State</figcaption>
+      </figure>
+    </div>
+   </div>
+  </div>
 </section>   
 </body>
 </html>
