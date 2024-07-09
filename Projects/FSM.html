@@ -119,7 +119,7 @@
     <p>
        I made the simulation playable, sort of like a mini-game, so I can practise how to program an AI agent in a game and how to solve problems
        I might face in different scenarios.<br>
-       The gameplay here is simple : the red dragon is guarding her own egg in what is left from a dragon's pit, the player 
+       The gameplay here is simple : the red dragon is guarding her own egg in what is left of a dragon's pit, the player 
        has to drag the dragon to the black magical vortex to kill her and take the egg to win.
     </p>
    </div>
@@ -167,13 +167,13 @@
     <p>
       <p>
         After all the states that inherit from the main state class are written, the <strong>Dragon</strong> script is written and attached to the 
-        dragon character. The dragon class will inherit from MonoBehaviour but can access the State Class using composition. 
+        dragon character. The dragon class will inherit from MonoBehaviour but can access the state class using composition. 
         In the <strong>Start method</strong> the Idle state is called as the entry point to the whole State Machine, then gets access to other states
-        using the method <strong>Update Process</strong> that calls the process method in the State class.
+        using the method <strong>Update Process</strong> that calls the process method in the state class.
       </p>
       
     <p>
-       The Idle state, similar to other states, inherit from the state class and overrides the Enter, Update and Exit method.
+      <strong>The Idle state :</strong> similar to other states, inherit from the state class and overrides the Enter, Update and Exit method.
        The enter method triggers the Idle animation, then the update method is called which calls the method '<b>Can See Player</b>',
        if it returns true the Pursue state is called, if it returns false then the Walk state is called at random.
        Once the State machine pick the next state, the exit method is called and the reset trigger is called for the Idle animation, so that
@@ -189,6 +189,45 @@
     <figure>
       <img src="./FSM_imgs/Idle.gif" alt="Idle animation">
       <figcaption>Dragon's Idle State</figcaption>
+      </figure>
+    </div>
+   </div>
+  </div>
+
+   <!--Walk subsection-->
+ <div class="subPara">
+  <h2 class="heading"> Walk State</h2>
+   <div class="text">
+    <p>
+      <p>
+         <strong>Game Environment:</strong> To make the dragon walk, I implemented a system in the 'Game Environment' script where the dragon agent
+         access the waypoints from a <strong>Singleton</strong> to ensure that there is only one instance of each waypoint and that more could be added 
+         later without the need to adjust the script.<br>
+
+        I started by setting cubes game objects in the scene and later turn off their mesh renderer, as they are only needed as check points 
+        for when the dragon reach each one of them. Then in the 'Game Environment' script, they are accessed and stored in a list ordered by
+         name using the LINQ library.
+      </p>
+      
+    <p>
+       <strong>The Walk State:</strong> starting from the Enter overridden method, the walk state was implemented by assuming that the closest 
+       waypoint is the one to walk towards (measured using vector distance method), then in the Update overridden method once its reached 
+       (measured using remaining distance method) the next checkpoint in the list is assigned as the target waypoint and the dragon can walk towards
+       it using set destination method and trigger the Walk animation.<br>
+       The Update method also calls the '<b>Can See Player</b>' method, if it returns true the Pursue state is called, if it returns false then the Walk
+       state continuous running. Once the State machine pick the next state, the exit method is then called.
+
+    </p>
+    
+   
+    <div class="img-container">
+      <figure>
+      <img src="./FSM_imgs/walk_diagram.drawio.png" alt="walk state flowchart">
+      <figcaption>Walk State Flowchart</figcaption>
+    </figure>
+    <figure>
+      <img src="./FSM_imgs/Walk.gif" alt="walk animation">
+      <figcaption>Dragon's Walk State</figcaption>
       </figure>
     </div>
    </div>
