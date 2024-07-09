@@ -160,6 +160,39 @@
    </div>
   </div>
 
+  <!--Idle subsection-->
+<div class="subPara">
+  <h2 class="heading"> Idle State</h2>
+   <div class="text">
+    <p>
+      <p>
+        After all the states that inherit from the main state class are written, the <strong>Dragon</strong> script is written and attached to the 
+        dragon character. The dragon class will inherit from MonoBehaviour but can access the State Class using composition. 
+        In the <strong>Start method</strong> the Idle state is called as the entry point to the whole State Machine, then gets access to other states
+        using the method <strong>Update Process</strong> that calls the process method in the State class.
+      </p>
+      
+    <p>
+       The Idle state, similar to other states, inherit from the state class and overrides the Enter, Update and Exit method.
+       The enter method triggers the Idle animation, then the update method is called which calls the method '<b>Can See Player</b>',
+       if it returns true the Pursue state is called, if it returns false then the Walk state is called at random.
+       Once the State machine pick the next state, the exit method is called and the reset trigger is called for the Idle animation, so that
+       the next time the Idle state is called, the animation clip will start from the beginning.
+    </p>
+    
+   
+    <div class="img-container">
+      <figure>
+      <img src="./FSM_imgs/Idle_diagram.drawio.png" alt="idle state flowchart">
+      <figcaption>Idle State Flowchart</figcaption>
+    </figure>
+    <figure>
+      <img src="./FSM_imgs/Idle.gif" alt="Idle animation">
+      <figcaption>Dragon's Idle State</figcaption>
+      </figure>
+    </div>
+   </div>
+  </div>
 
 </section>   
 </body>
