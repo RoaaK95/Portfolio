@@ -118,12 +118,49 @@
    <div class="text">
     <p>
        I made the simulation playable, sort of like a mini-game, so I can practise how to program an AI agent in a game and how to solve problems
-       I might face in different scenarios.
-       The gameplay here is simple : the red dragon is guarding her own egg in the ruins of what is left from a dragons pit, the player 
+       I might face in different scenarios.<br>
+       The gameplay here is simple : the red dragon is guarding her own egg in what is left from a dragon's pit, the player 
        has to drag the dragon to the black magical vortex to kill her and take the egg to win.
     </p>
    </div>
 </div>
+
+
+<!--Animation subsection-->
+<div class="subPara">
+  <h2 class="heading"> Dragon Animation System</h2>
+   <div class="text">
+    <p>
+      <strong>Finite State Machine</strong> model is used in this simulation to control the behavior of a dragon agent by controlling its animation
+      system. I started with writing the main class that the other states (actions) will inherit from. <br>
+      The dragon agent has five animations: <strong>Idle, Walk, Pursue, Attack and Die.</strong> 
+      Each of these animations is considered a state that the State Machine control its flow, so the <strong>State Class</strong> 
+      have all these animations stored in an enum.
+      
+    </p>
+    <p>
+       Any state in the State Machine has three processes that run at a different time:<strong> Enter, Update and Exit.</strong><br>
+       These processes (events) are also stored in an enum. Then using a virtual method for each process, the methods will be overridden by 
+       each state settings, triggers and rules.The Process method control the flow from one stage to another for each action and calls the
+        method for the current stage.It also ensures to call the next state in the exit method.<br>
+       The <strong>Update</strong> process is where the state machine decides when to transition to the next state or stay running the current one,
+       if the condition is met then the exit process is run and the next state starts running by calling the enter process.
+    </p>
+    
+    <div class="img-container">
+      <figure>
+      <img src="./FSM_imgs/Animator.png" alt="dragon character animator">
+      <figcaption>Dragon's Animator</figcaption>
+    </figure>
+    <figure>
+      <img src="./FSM_imgs/Dragon_animation.gif" alt="dragon's animation clip">
+      <figcaption>Dragon's Idle Clip</figcaption>
+      </figure>
+    </div>
+   </div>
+  </div>
+
+
 </section>   
 </body>
 </html>
