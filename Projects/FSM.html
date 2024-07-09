@@ -269,6 +269,48 @@
     </div>
    </div>
   </div>
+
+   <!--Attack subsection-->
+ <div class="subPara">
+  <h2 class="heading"> Attack State</h2>
+   <div class="text">
+    <p>
+      <p>
+         <strong>Can Attack Player Method:</strong> Since the other states use this method to enter the attack state, I also wrote this method
+         in the main state class, so it could be accessed from the other states. The method calculates the distance between the player and the 
+         agent, then returns true if the player is less than the 'fire distance' variable, otherwise it returns false.
+         
+      </p>
+      
+    <p>
+       <strong>The Attack State:</strong> starting from the Enter overridden method, the attack animation is triggered.
+       I also used 'is stopped' method to stop the dragon moving forward while attacking the player, to give the dragon a more realistic behavior.
+       In the Update method, The 'quaternion slerp' method is used to rotate the dragon agent gradually to face the player while attacking.<br>
+       Then the '<b>Can Attack Player</b>' method is called again, if it returns true then the Attack states continues running. If it returns 
+       false then the State Machine will pick the Walk state as the next state.
+     
+    </p>
+    <p>
+      I found that if I switched to pursue state instead of walk state here, then the agent will continue trying to pursue the player even
+       when the player is not within the dragon's visual field. To solve this I chose the walk state, which will switch immediately to pursue state
+       when needed. The dragon agent behavior was then fixed without the need to use the '<b>Can See Player</b>' method again in the attack state 
+       script.
+    </p>
+   
+    <div class="img-container">
+      <figure>
+      <img src="./FSM_imgs/Attack_diagram.drawio.png" alt="attack state flowchart">
+      <figcaption>Attack State Flowchart</figcaption>
+    </figure>
+    <figure>
+      <img src="./FSM_imgs/Attack.gif" alt="attack animation">
+      <figcaption>Dragon's Attack State</figcaption>
+      </figure>
+    </div>
+   </div>
+  </div>
+
+
 </section>   
 </body>
 </html>
