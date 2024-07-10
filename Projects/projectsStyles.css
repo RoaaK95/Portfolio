@@ -228,7 +228,13 @@ section{
     width: 100%;
     background-color: var(--second-bg-color);
 }
-
+#itch-logo{
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    box-shadow: none;
+    margin-right: 0.3rem;
+}
 /* Resizing*/
 @media(max-width:991px){
     header{
