@@ -321,7 +321,7 @@
           that its no longer protected now that the dragon is dead.<br>
           
       </p>
-      
+
        <p>
         <strong>The Die State:</strong> starting from the Enter overridden method, the dead animation is triggered.
         There are no overridden update method here because once the dragon agent die, there should be no other actions.
@@ -340,6 +340,38 @@
     </div>
    </div>
   </div>
+
+  <!--What I learned subsection-->
+  <div class="subPara">
+    <h2 class="heading"> What I Learned</h2>
+     <div class="text">
+      <p>
+          The final project with all states combined made the transition period between states less noticeable and the animations seem to 
+          blend together (as shown in image below) the dragon agent goes from pursue to walk state once the player goes far way from the
+          dragon's visual field. <br>
+          To make the dragon's behavior more realistic, I changed the speed for each moving state; during the pursue state, the dragon 
+          agent moves faster than during the walk state, to make it seem like the dragon is on attack mode when something is threatening 
+          her egg.
+      </p>
+      <p>
+         This project was a fun and challenging experience for me, I learned a lot about programming design patterns, refactoring to
+         write a clean code and the importance of vector mathematics and physics in AI programming.
+         I gained a deeper understanding of finite state machine model and how it can provide a structured yet flexible system.
+    </p>
+      
+      <div class="img-container">
+        <figure>
+        <img src="./FSM_imgs/pursue_to_walk.gif" alt="pursue to walk">
+        <figcaption>Pursue to Walk transition</figcaption>
+      </figure>
+      <figure>
+        <img src="./FSM_imgs/Gameplay.gif" alt="final">
+        <figcaption>Final Gameplay</figcaption>
+        </figure>
+      </div>
+     </div>
+    </div>
+
 </section>   
 </body>
 </html>
