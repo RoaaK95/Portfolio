@@ -310,7 +310,36 @@
    </div>
   </div>
 
-
+ <!--Die subsection-->
+ <div class="subPara">
+  <h2 class="heading"> Die State</h2>
+   <div class="text">
+    <p>
+      <p>
+          Unlike other states, the Die state is called within the dragon script. Once the dragon enter the trap game object collider,
+          the 'on Trigger Enter' method then calls the Die state and the fire shield VFX around the dragon's egg disappear to signifies 
+          that its no longer protected now that the dragon is dead.<br>
+          
+      </p>
+      
+       <p>
+        <strong>The Die State:</strong> starting from the Enter overridden method, the dead animation is triggered.
+        There are no overridden update method here because once the dragon agent die, there should be no other actions.
+        The exit method will simply exit the dead state with no 'reset trigger' method for the same reason.
+       </p>
+   
+    <div class="img-container">
+      <figure>
+      <img src="./FSM_imgs/Die_diagram.drawio.png" alt="die state flowchart">
+      <figcaption>Die State Flowchart</figcaption>
+    </figure>
+    <figure>
+      <img src="./FSM_imgs/Die.gif" alt="die animation">
+      <figcaption>Dragon's Die State</figcaption>
+      </figure>
+    </div>
+   </div>
+  </div>
 </section>   
 </body>
 </html>
