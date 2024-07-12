@@ -90,7 +90,8 @@
     <p>
        The player character is a human-crocodile hybrid that was imprisoned after a failed experiment, he wants to 
        escape the prison, to do so he needs to solve two number puzzles, collect all necessary items to inventory 
-       and avoid being followed by a ghost.
+       and avoid being followed by a ghost.<br>
+       Player controllers: arrow keys.
     </p>
     <p>
       <strong>Story:</strong>
@@ -111,6 +112,33 @@
    </div>
   </div>
 
+  <!--Puzzle-->
+<div class="subPara">
+  <h2 class="heading">Puzzle</h2>
+   <div class="text">
+    <p>
+        To make the puzzle, I made an 'Intractable Key' that points to the puzzle mini-game game object 
+        once the player try to take the key.
+        The puzzle mini-game script is then called, which disables player controllers temporary 
+        and enable the puzzle.<br> 
+        A series of digits are called at random and then disappear in few seconds.
+        If the input code from the player input 'button click' matches the series of digits 'card code'
+        then the key is collected in inventory and the player controllers are enabled again.
+    </p>
+ 
+    
+    <div class="img-container">
+      <figure>
+      <img src="./Rep_dungeon_imgs/ghost_box.gif" alt="key to puzzle">
+      <figcaption>Puzzle Key</figcaption>
+    </figure>
+    <figure>
+      <img src="./Rep_dungeon_imgs/puzzle (2).png" alt="puzzle">
+      <figcaption>Puzzle Mini-Game</figcaption>
+      </figure>
+    </div>
+   </div>
+  </div>
 </section>
 
 </body>
