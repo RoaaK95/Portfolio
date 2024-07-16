@@ -14,6 +14,7 @@
  --second-bg-color: #131313;
  --text-color: white;
  --main-color: #c088d8;
+ color-scheme: only light;
 }
 
 html{
@@ -644,3 +645,4 @@ span{
         grid-template-columns: repeat(1,1fr);
     }
 }
+
