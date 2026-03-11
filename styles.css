@@ -215,11 +215,27 @@ span {
   padding: 1rem 2.8rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  position: relative;
+}
+
+.resume-btn::after {
+  content: "▼";
+  font-size: 1.2rem;
+  margin-left: 0.8rem;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .resume-dropdown:hover .resume-btn {
   transform: scale(1.05);
   box-shadow: 0 0 50px var(--main-color);
+}
+
+.resume-dropdown:hover .resume-btn::after {
+  opacity: 1;
+  transform: rotate(180deg);
 }
 
 .resume-options {
@@ -286,7 +302,7 @@ span {
   position: relative;
 }
 .text-animation span::before {
-  content: "Game Programmer";
+  content: "Web Developer";
   color: var(--main-color);
   animation: words 20s infinite;
 }
@@ -309,14 +325,14 @@ span {
 }
 @keyframes words {
   0%,
-  30% {
+  20% {
     content: "Software Engineer";
   }
-  31%,
-  60% {
+  21%,
+  40% {
     content: "Frontend Developer";
   }
-  61%,
+  41%,
   60% {
     content: "Game Programmer";
   }
@@ -474,17 +490,17 @@ span {
   color: var(--main-color);
 }
 
-/* EDUCATION*/
+/* workexperience*/
 .heading {
   font-size: 8rem;
   text-align: center;
   margin: 5rem 0;
 }
-.education {
+.workexperience {
   padding: 100px 15px;
   background: var(--second-bg-color);
 }
-.education h2 {
+.workexperience h2 {
   margin-bottom: 5rem;
 }
 .timeline-items {
