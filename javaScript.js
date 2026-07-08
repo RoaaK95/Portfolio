@@ -20,50 +20,7 @@ window.onscroll = () => {
     }
   });
 };
-
 menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
 };
-
-// Resume dropdown functionality for mobile/touch devices only
-if ('ontouchstart' in window) {
-  document.addEventListener("DOMContentLoaded", () => {
-    const resumeDropdowns = document.querySelectorAll(".resume-dropdown");
-
-    resumeDropdowns.forEach((dropdown) => {
-      const options = dropdown.querySelector(".resume-options");
-
-      dropdown.addEventListener("click", (e) => {
-        // Only toggle if clicking on the button area, not the options
-        if (!e.target.closest(".resume-options a")) {
-          e.preventDefault();
-          e.stopPropagation();
-
-          // Close all dropdowns first
-          resumeDropdowns.forEach((other) => {
-            if (other !== dropdown) {
-              other.querySelector(".resume-options").style.visibility = "hidden";
-              other.querySelector(".resume-options").style.opacity = "0";
-            }
-          });
-
-          // Toggle current dropdown
-          const isVisible = options.style.visibility === "visible";
-          options.style.visibility = isVisible ? "hidden" : "visible";
-          options.style.opacity = isVisible ? "0" : "1";
-        }
-      });
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener("click", (e) => {
-      if (!e.target.closest(".resume-dropdown")) {
-        resumeDropdowns.forEach((dropdown) => {
-          dropdown.querySelector(".resume-options").style.visibility = "hidden";
-          dropdown.querySelector(".resume-options").style.opacity = "0";
-        });
-      }
-    });
-  });
-}
